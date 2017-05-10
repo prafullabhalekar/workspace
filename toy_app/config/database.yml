@@ -23,8 +23,8 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: awsmysql
-  username: system
-  password: welcome1
-  host: awsmysql.cfupaagr4rrb.us-west-2.rds.amazonaws.com
-  port: 3306
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
